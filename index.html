@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopMax - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">ShopMax</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <button onclick="searchProducts()">🔍</button>
+    </div>
+    <nav>
+      
+      <a href="#" id="login-link" onclick="openModal()">Login</a>
+      <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+
+      <a href="#">Orders</a>
+      <a href="#">Cart 🛒 (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+
+
+  <section  class="banner">
+    
+    
+    
+  </section >
+
+  <section class="categories" id="category-list">
+    <div class="category" onclick="filterProducts('All')">All</div>
+    <div class="category" onclick="filterProducts('Electronics')">Electronics</div>
+    <div class="category" onclick="filterProducts('Fashion')">Fashion</div>
+    <div class="category" onclick="filterProducts('Home')">Home</div>
+    <div class="category" onclick="filterProducts('Beauty')">Beauty</div>
+    <div class="category" onclick="filterProducts('Sports')">Sports</div>
+  </section>
+
+  <section class="products" id="product-list"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
